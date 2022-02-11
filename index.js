@@ -63,7 +63,7 @@ function obtenerPares(array) {
 let pintarArray = array => {
     let sReturn = "[";
     for (let i = 0; i < array.length; i++) {
-        if (i===0) {
+        if (i === 0) {
             sReturn += array[i];
         } else {
             sReturn += ", " + array[i];
@@ -74,31 +74,57 @@ let pintarArray = array => {
 }
 
 // 13.- Crea la función 'arrayMapi' que acepte como argumento un array y una función y retorne un array en el que se haya aplicado la función a cada elemento del primer array
-
-
+let array = [2, 4, 6, 8, 10];
+let fun = (arg) => arg * 2;
+let arrayMapi = (array, fun) => array.map(aReturn => fun(aReturn));
 
 // 14.-Crea la función 'eliminarDuplicados' que acepte como argumento un array y deberá devolver un array en el que se hayan eliminado los duplicados
+let eliminarDuplicados = (array) => Array.from(new Set(array));
 
 // 15.- Crea una variable de nombre 'arrayNumerosNeg' cuyo valor sea el array de numeros del 0 al -9 incluidos (0, -1, -2...)
+let arrayNumerosNeg = [0, -1, -2, -3, -4, -5, -6, -7, -8, -9];
 
 // 16.- Crea una variable de nombre 'holaMundo' cuyo valor sea un array con las palabras 'Hola' y 'Mundo'
+let holaMundo = ["Hola", "Mundo"];
 
 // 17.- Crea una variable de nombre 'loGuardoTodo' cuyo valor sea un array con los valores 'hola', 'que', 23, 42.33 y 'tal'
+let loGuardoTodo = ['hola', 'que', 23, 42.33, 'tal'];
 
 // 18.- Crea una variable de nombre 'arrayDeArrays' cuyo valor sea el siguiente array [[756, 'nombre'], [225, 'apellido'], [298, 'direccion']]
+let arrayDeArrays = [[756, 'nombre'], [225, 'apellido'], [298, 'direccion']];
 
 // 19.- Crea la función 'multiplicacion' que acepte como argumentos dos números y devuelva como resultado su multiplicacion
+let multiplicacion = (num1, num2) => num1 * num2;
 
 // 20.- Crea la función 'division' que acepte como argumentos dos números y devuelva como resultado su division
+let division = (num1, num2) => num1 / num2;
 
 // 21.- Crea la función 'esPar' que acepte como argumento un número y devuelva true si es par y false si es impar
+let esPar = (num) => num % 2 === 0;
 
 // 22.- Crea una variable de nombre 'arrayFunciones' que tenga el valor de un array con las funciones: suma, resta y multiplicacion (todas aceptan 2 números como argumento y devuelve el resultado de su operación)
+let arrayFunciones = [suma = (num1, num2) => num1 + num2, resta = (num1, num2) => num1 - num2, multiplicacion = (num1, num2) => num1 * num2];
 
 // 23.- Crea la función 'ordenarArray2' que acepte como argumento un array de números y devuelva un array ordenado de mayor a menor
+let ordenarArray2 = (array) => array.reverse();
 
 // 24.- Crea la función 'obtenerImpares' que acepte como argumento un array de números y devuelva un array con los elementos que sean impares
+let obtenerImpares = (array) => array.filter(n => n % 2);
 
 // 25.- Crear la función 'sumarArray' que acepte como argumento un array numérico y devuelva el resultado de la suma de los elementos
+let sumarArray = (array) => {
+    let sumatorio = 0;
+    for (let i = 0; i < array.length; i++) {
+        sumatorio += array[i];
+    }
+    return sumatorio;
+}
 
 // 26.- Crear la función 'multiplicarArray' que acepte como argumento un array numérico y devuelva el resultado de la multiplicación de los elementos
+let multiplicarArray = (array) => {
+    let multiplicacion = 1;
+    for (let i = 0; i < array.length; i++) {
+        multiplicacion *= array[i];
+    }
+    return multiplicacion;
+}
